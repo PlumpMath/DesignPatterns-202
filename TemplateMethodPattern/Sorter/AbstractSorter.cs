@@ -1,17 +1,14 @@
 ﻿using TemplateMethodPattern.Sorting_Algorithms;
 
-namespace TemplateMethodPattern
+namespace TemplateMethodPattern.Sorter
 {
-    public abstract class Sorter
+    public abstract class AbstractSorter
     {
-        protected Sorter(int numberofInput,string algorithmName)
+        protected AbstractSorter(int numberofInput)
         {
             NumberofInput = numberofInput;
-            AlgorithmName = algorithmName;
         }
         protected int NumberofInput { get; set; }
-        protected string AlgorithmName { get; set; }
-        protected abstract ISortingAlgorithm SortingAlgorithm { get;}
         protected abstract void ReadInput();
         protected abstract void SortData();
         protected abstract void PrintData();

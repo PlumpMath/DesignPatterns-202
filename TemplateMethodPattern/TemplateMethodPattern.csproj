@@ -43,15 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IntegerSorter.cs" />
+    <Compile Include="Sorter\IntegerSorter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sorter.cs" />
+    <Compile Include="Sorter\AbstractSorter.cs" />
     <Compile Include="Sorting Algorithms\AlgorithmFactory.cs" />
-    <Compile Include="Sorting Algorithms\ISortingAlgorithm.cs" />
-    <Compile Include="Sorting Algorithms\MergeSort.cs" />
-    <Compile Include="Sorting Algorithms\QuickSort.cs" />
-    <Compile Include="StringSorter.cs" />
+    <Compile Include="Sorting Algorithms\MergeSortAlgorithm.cs" />
+    <Compile Include="Sorter\StringSorter.cs" />
+    <Compile Include="Sorting Algorithms\QuickSortAlgorithm.cs" />
+    <Compile Include="Sorting Algorithms\SortingAlgorithm.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

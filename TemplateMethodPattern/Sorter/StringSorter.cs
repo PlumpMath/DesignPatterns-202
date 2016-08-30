@@ -1,17 +1,17 @@
 ﻿using System;
 using TemplateMethodPattern.Sorting_Algorithms;
 
-namespace TemplateMethodPattern
+namespace TemplateMethodPattern.Sorter
 {
-    public class StringSorter : Sorter
+    public class StringSorter : AbstractSorter
     {
         private readonly string[] _myStringArray;
-        public StringSorter(int numberofInput, string algorithmName) : base(numberofInput, algorithmName)
+        private readonly SortingAlgorithm<string> _stringSortingAlgorithm;
+        public StringSorter(int numberofInput, string algorithmName) : base(numberofInput)
         {
             _myStringArray = new string[NumberofInput];
+            _stringSortingAlgorithm = AlgorithmFactory<string>.GetSortingAlgorithm(algorithmName);
         }
-
-        protected override ISortingAlgorithm SortingAlgorithm => AlgorithmFactory.GetSortingAlgorithm(AlgorithmName);
 
         protected override void ReadInput()
         {
@@ -27,7 +27,7 @@ namespace TemplateMethodPattern
         protected override void SortData()
         {
             Console.WriteLine("Sorting String Data elements... ");
-            SortingAlgorithm.Sort(_myStringArray, 0, _myStringArray.Length - 1);
+            _stringSortingAlgorithm.Sort(_myStringArray, 0, _myStringArray.Length - 1);
         }
 
         protected override void PrintData()
