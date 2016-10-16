@@ -2,10 +2,10 @@
 
 namespace BuilderPattern
 {
-    public class BirckHouseBuilder : IHouseBuilder
+    public class BrickHouseBuilder : IHouseBuilder
     {
         private House _house;
-        public BirckHouseBuilder()
+        public BrickHouseBuilder()
         {
             _house = new House("Brick Made House");
 

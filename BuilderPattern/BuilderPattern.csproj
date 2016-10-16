@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BirckHouseBuilder.cs" />
+    <Compile Include="BrickHouseBuilder.cs" />
     <Compile Include="GlassHouseBuilder.cs" />
     <Compile Include="HouseEnums\Enums.cs" />
     <Compile Include="House.cs" />

@@ -32,7 +32,7 @@ namespace BuilderPattern
                 case "glass":
                     return new GlassHouseBuilder();
                 case "brick":
-                    return new BirckHouseBuilder();
+                    return new BrickHouseBuilder();
                 case "wood":
                     return new WoodenHouseBuilder();
                 default:
