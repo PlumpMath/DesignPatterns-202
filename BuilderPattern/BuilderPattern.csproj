@@ -43,15 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BrickHouseBuilder.cs" />
-    <Compile Include="GlassHouseBuilder.cs" />
+    <Compile Include="House Builder\BrickHouseBuilder.cs" />
+    <Compile Include="House Builder\GlassHouseBuilder.cs" />
+    <Compile Include="House Builder\House.cs" />
+    <Compile Include="House Builder\HouseManufacturer.cs" />
+    <Compile Include="House Builder\IHouseBuilder.cs" />
+    <Compile Include="House Builder\WoodenHouseBuilder.cs" />
     <Compile Include="HouseEnums\Enums.cs" />
-    <Compile Include="House.cs" />
-    <Compile Include="HouseManufacturer.cs" />
-    <Compile Include="IHouseBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WoodenHouseBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

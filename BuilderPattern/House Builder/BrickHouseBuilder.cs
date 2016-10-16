@@ -1,6 +1,6 @@
-﻿using BuilderPattern.HouseEnums;
+using BuilderPattern.HouseEnums;
 
-namespace BuilderPattern
+namespace BuilderPattern.House_Builder
 {
     public class BrickHouseBuilder : IHouseBuilder
     {
