@@ -43,12 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="House Builder\BrickHouseBuilder.cs" />
-    <Compile Include="House Builder\GlassHouseBuilder.cs" />
+    <Compile Include="Directors\DuplexBuidlingDirector.cs" />
+    <Compile Include="Directors\SingleStoriedDirector.cs" />
+    <Compile Include="Directors\IBuildingDirector.cs" />
+    <Compile Include="Directors\ThreeStoryBuildingDirector.cs" />
+    <Compile Include="House Builder\ConcreteBrickHouseBuilder.cs" />
+    <Compile Include="House Builder\ConcreteGardenHouseBuilder.cs" />
+    <Compile Include="House Builder\ConcreteGlassHouseBuilder.cs" />
+    <Compile Include="House Builder\Floor.cs" />
     <Compile Include="House Builder\House.cs" />
-    <Compile Include="House Builder\HouseManufacturer.cs" />
-    <Compile Include="House Builder\IHouseBuilder.cs" />
-    <Compile Include="House Builder\WoodenHouseBuilder.cs" />
+    <Compile Include="House Builder\IBuildingBuilder.cs" />
+    <Compile Include="House Builder\IStoriedBuildingBuilder.cs" />
+    <Compile Include="House Builder\MultiStoryBuildingBuilder.cs" />
+    <Compile Include="House Builder\SingleStoryBuildingBuilder.cs" />
     <Compile Include="HouseEnums\Enums.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

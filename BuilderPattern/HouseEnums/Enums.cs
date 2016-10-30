@@ -40,22 +40,50 @@
     public enum FloorType
     {
         /// <summary>
-        /// Floor is made using Wood
+        /// Draw a Single_Storied Story Bulding
         /// </summary>
+        SingleStoried,
+        /// <summary>
+        /// Draws a Duplex Building
+        /// </summary>
+        Duplex,
+
+        /// <summary>
+        /// Draws ThreeStoried Storied Building
+        /// </summary>
+        ThreeStoried
+    }
+
+    public enum DoorType
+    {
+        /// <summary>
+        /// Door of Type Glass
+        /// </summary>
+        Glass,
+
+        /// <summary>
+        /// Door Made with Wood
+        /// </summary>
+        Wooden
+    }
+
+    public enum WindowType
+    {
+        /// <summary>
+        /// Windows Made with Glass
+        /// </summary>
+        Glass,
+
+        /// <summary>
+        /// Windows Made with Wood
+        /// </summary>
+        Wooden,
+    }
+
+    public enum RoomType
+    {
+        Glass,
         Wood,
-        /// <summary>
-        /// Floor is made using tiles
-        /// </summary>
-        Tiles,
-
-        /// <summary>
-        /// Floor is of type Mosaic
-        /// </summary>
-        Mosaic,
-
-        /// <summary>
-        /// floor is made with soil
-        /// </summary>
-        Soil
+        Brick
     }
 }
