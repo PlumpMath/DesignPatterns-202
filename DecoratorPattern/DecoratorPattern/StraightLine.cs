@@ -4,28 +4,26 @@ namespace DecoratorPattern
 {
     public class StraightLine : PointDecorator
     {
-        private readonly string _point1;
-        private readonly string _point2;
+        private readonly string _secondPoint;
 
-        public StraightLine(Validator validator,string p1,string p2) : base(validator)
+        public StraightLine(Validator validator,string secondPoint) : base(validator)
         {
-            _point1 = p1;
-            _point2 = p2;
+            _secondPoint = secondPoint;
         }
 
-        public bool Validate()
+        public override bool Validate(string firstPoint)
         {
-            return base.Validate(_point1) && base.Validate(_point2);
+            return base.Validate(firstPoint) && base.Validate(_secondPoint);
         }
 
-        public void Draw()
+        public override void Draw(string firstPoint)
         {
-            if (Validate())
+            if (Validate(firstPoint))
             {
                 Console.WriteLine("\n------Drawing Line below : ");
-                base.Draw(_point1);
-                base.Draw(_point2);
-                Console.WriteLine("Connecting point {0} to point {1}",_point1,_point2);
+                base.Draw(firstPoint);
+                base.Draw(_secondPoint);
+                Console.WriteLine("Connecting point {0} to point {1}", firstPoint, _secondPoint);
                 Console.WriteLine("---Done drawing Straight Line\n");
             }
             else

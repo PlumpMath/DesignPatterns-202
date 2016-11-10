@@ -35,7 +35,7 @@ namespace DecoratorPattern
                     string p1 = Console.ReadLine();
                     Console.WriteLine("Enter Point # 2");
                     string p2 = Console.ReadLine();
-                    new StraightLine(pointvalidator, p1, p2).Draw();
+                    new StraightLine(pointvalidator, p2).Draw(p1);
                     break;
 
                 case "3":
@@ -47,7 +47,7 @@ namespace DecoratorPattern
                     string rp3 = Console.ReadLine();
                     Console.WriteLine("Enter Point # 4");
                     string rp4 = Console.ReadLine();
-                    new Rectangle(pointvalidator, rp1, rp2, rp3, rp4).Draw();
+                    new Rectangle(pointvalidator, rp2, rp3, rp4).Draw(rp1);
                     break;
                 default:
                     Console.WriteLine("Invalid Choice");
