@@ -2,6 +2,9 @@
 
 namespace CommandPattern
 {
+    /// <summary>
+    /// Concrete Command class
+    /// </summary>
     public class AddItemsCommand : ICommand
     {
         private readonly ItemContainer _itemContainer;

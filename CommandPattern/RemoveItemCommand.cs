@@ -2,6 +2,9 @@
 
 namespace CommandPattern
 {
+    /// <summary>
+    /// Concrete Command Class
+    /// </summary>
     public class RemoveItemCommand : ICommand
     {
         private readonly ItemContainer _itemContainer;
