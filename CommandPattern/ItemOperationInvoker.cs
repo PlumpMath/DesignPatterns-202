@@ -37,11 +37,19 @@ namespace CommandPattern
         public void Undo()
         {
 
-            if (current > 0)
+            if (IsOperationUndoable())
             {
                 ICommand command = _commands[--current];
                 command.UnExecute();
-                _commands.Remove(command);
+            }
+        }
+
+        public void Redo()
+        {
+            if (IsOperationRedoable())
+            {
+                ICommand command = _commands[current++];
+                command.Execute();
             }
         }
 
@@ -57,7 +65,12 @@ namespace CommandPattern
 
         public bool IsOperationUndoable()
         {
-            return _commands.Any();
+            return current > 0;
+        }
+
+        public bool IsOperationRedoable()
+        {
+            return current <= _commands.Count - 1;
         }
     }
 }

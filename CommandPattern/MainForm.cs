@@ -21,8 +21,9 @@ namespace CommandPattern
                 itemListBox.Items.Add(item);
             }
 
-            btnRemove.Visible = _invoker.IsItemsRemovable();
-            btnUndo.Visible = _invoker.IsOperationUndoable();
+            btnRemove.Enabled = _invoker.IsItemsRemovable();
+            btnUndo.Enabled = _invoker.IsOperationUndoable();
+            btnRedo.Enabled = _invoker.IsOperationRedoable();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -40,6 +41,12 @@ namespace CommandPattern
         private void btnUndo_Click(object sender, EventArgs e)
         {
             _invoker.Undo();
+            RefreshUIElement();
+        }
+
+        private void btnRedo_Click(object sender, EventArgs e)
+        {
+            _invoker.Redo();
             RefreshUIElement();
         }
     }

@@ -33,6 +33,7 @@
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnUndo = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.btnRedo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // itemListBox
@@ -65,7 +66,7 @@
             // 
             // btnUndo
             // 
-            this.btnUndo.Location = new System.Drawing.Point(486, 199);
+            this.btnUndo.Location = new System.Drawing.Point(496, 160);
             this.btnUndo.Name = "btnUndo";
             this.btnUndo.Size = new System.Drawing.Size(108, 23);
             this.btnUndo.TabIndex = 3;
@@ -86,11 +87,22 @@
     " You can remove that by clicking the remove button.  Also you can undo your oper" +
     "ation";
             // 
+            // btnRedo
+            // 
+            this.btnRedo.Location = new System.Drawing.Point(496, 234);
+            this.btnRedo.Name = "btnRedo";
+            this.btnRedo.Size = new System.Drawing.Size(108, 23);
+            this.btnRedo.TabIndex = 5;
+            this.btnRedo.Text = "Redo Operation";
+            this.btnRedo.UseVisualStyleBackColor = true;
+            this.btnRedo.Click += new System.EventHandler(this.btnRedo_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 312);
+            this.Controls.Add(this.btnRedo);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnUndo);
             this.Controls.Add(this.btnRemove);
@@ -109,6 +121,7 @@
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnUndo;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button btnRedo;
     }
 }
 
